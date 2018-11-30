@@ -22,7 +22,7 @@ public class JavaClassLoader extends ClassLoader {
         }
     }
 
-    void loadInternalClass(String className, String methodName) throws ClassNotFoundException, Exception {
+    private void loadInternalClass(String className, String methodName) throws ClassNotFoundException, Exception {
         ClassLoader classLoader = this.getClass().getClassLoader();
         Class loadedMyClass = classLoader.loadClass(className);
         log("Loaded class name: " + loadedMyClass.getName());
